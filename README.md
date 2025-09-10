@@ -1,7 +1,30 @@
 # Node Dev Setup Script for Ubuntu
 
 ## Install Git
+```bash
 sudo apt install git
+```
+
+and set up your git config
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+generate ssh key
+```bash
+ssh-keygen -t ed25519 -C "you@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+```
+then add the ssh key to your github account
+[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]
+
+## Install curl
+```bash
+sudo apt install curl
+```
 
 ## Install zsh
 ```bash
