@@ -29,8 +29,6 @@ sudo apt install curl
 ## Install zsh
 ```bash
 sudo apt install zsh
-chsh -s $(which zsh)
-source ~/.zshrc
 ```
 
 ## Install ohmyzsh
@@ -39,7 +37,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 ```
 and zsh autosuggestions (optional)
 ```bash
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # add zsh-autosuggestions to plugins in ~/.zshrc
 echo "plugins=(git zsh-autosuggestions)" >> ~/.zshrc
 # then source ~/.zshrc
