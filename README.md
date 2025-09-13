@@ -24,6 +24,9 @@ then add the ssh key to your github account
 ## Install zsh
 ```bash
 sudo apt install zsh
+
+# Set zsh as default shell
+chsh -s $(which zsh)
 ```
 
 ### Install curl
