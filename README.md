@@ -21,25 +21,30 @@ cat ~/.ssh/id_ed25519.pub
 then add the ssh key to your github account
 [https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]
 
-## Install curl
-```bash
-sudo apt install curl
-```
-
 ## Install zsh
 ```bash
 sudo apt install zsh
 ```
 
-## Install ohmyzsh
+### Install curl
+```bash
+sudo apt install curl
+```
+
+### Install ohmyzsh
 ```bash
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 and zsh autosuggestions (optional)
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 # add zsh-autosuggestions to plugins in ~/.zshrc
-echo "plugins=(git zsh-autosuggestions)" >> ~/.zshrc
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
+
 # then source ~/.zshrc
 source ~/.zshrc
 ```
