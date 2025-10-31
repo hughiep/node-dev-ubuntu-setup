@@ -36,6 +36,11 @@ Host github.com
    IdentityFile ~/.ssh/id_hiep
 ```
 
+Set properly permission for this config file
+```bash
+chmod 600 ~/.ssh/config
+```
+
 ## Install zsh
 ```bash
 sudo apt install zsh
