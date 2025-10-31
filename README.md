@@ -1,11 +1,11 @@
-# Node Dev Setup Script for Ubuntu
+# Node Development Env Setup (Ubuntu)
 
 ## Install Git
 ```bash
 sudo apt install git
 ```
 
-and set up your git config
+and set up your git global config
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
@@ -18,8 +18,23 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 ```
+
 then add the ssh key to your github account
 [https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]
+
+*Optional
+If you are using multiple git accounts, using config file 
+```bash
+touch ~/.ssh/config
+```
+
+Example ssh account config
+```bash
+Host github.com
+   HostName github.com
+   PreferredAuthentications publickey
+   IdentityFile ~/.ssh/id_hiep
+```
 
 ## Install zsh
 ```bash
